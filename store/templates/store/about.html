@@ -1,0 +1,192 @@
+{% load static %}
+
+<div class="row">
+  <!-- About Section -->
+  <section id="about">
+    <div class="about container">
+      <div class="col-left">
+        <div class="about-img">
+          <img
+            src="{% static  'images/logo.png' %}"
+            alt="img"
+            width="250px"
+            height="370px"
+          />
+        </div>
+      </div>
+      <div class="col-right">
+        <h1 class="section-title" style="color: white">
+          About <span style="color: white">Us</span>
+        </h1>
+        <h2 style="color: white">Front End and Backend Developers</h2>
+        <p style="color: white">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores,
+          velit alias eius non illum beatae atque repellat ratione qui veritatis
+          repudiandae adipisci maiores. At inventore necessitatibus deserunt
+          exercitationem cumque earum omnis ipsum rem accusantium quis, quas
+          quia, accusamus provident suscipit magni! Expedita sint ad dolore,
+          commodi labore nihil velit earum ducimus nulla quae nostrum fugit aut,
+          deserunt reprehenderit libero enim!
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- End About Section -->
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact container">
+      <div>
+        <h1 class="section-title" style="color: white">Contact info</h1>
+      </div>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="icon">
+            <img src="https://img.icons8.com/bubbles/100/000000/phone.png" />
+          </div>
+          <div class="contact-info">
+            <h1 style="color: white">Phone</h1>
+            <h2 style="color: white">+1 234 123 1234</h2>
+            <h2 style="color: white">+1 234 123 1234</h2>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon">
+            <img src="https://img.icons8.com/bubbles/100/000000/new-post.png" />
+          </div>
+          <span class="contact-info">
+            <h1 style="color: white">Email</h1>
+            <h2 style="color: white">info@gmail.com</h2>
+            <h2 style="color: white">abcd@gmail.com</h2>
+          </span>
+        </div>
+        <div class="contact-item">
+          <div class="icon">
+            <img
+              src="https://img.icons8.com/bubbles/100/000000/map-marker.png"
+            />
+          </div>
+          <div class="contact-info">
+            <h1 style="color: white">Address</h1>
+            <h2 style="color: white">Mumbai,</h2>
+            <h2 style="color: white">Maharashatra</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section -->
+
+  <style>
+    .row {
+      background-color: black;
+      z-index: -1;
+    }
+    /* About Section */
+    #about .col-left .about-img::after {
+      content: "";
+      position: absolute;
+      left: -33px;
+      top: 19px;
+      height: 98%;
+      width: 98%;
+      border: 7px solid crimson;
+      z-index: 2;
+    }
+    img {
+      margin-right: 5px;
+      margin-bottom: 5px;
+      border: black 2px solid;
+      z-index: 6;
+    }
+    #about .about {
+      flex-direction: column-reverse;
+      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 100px 20px;
+    }
+    #about .col-left {
+      width: 250px;
+      height: 360px;
+    }
+    #about .col-right {
+      width: 100%;
+    }
+    #about .col-right h2 {
+      font-size: 1.8rem;
+      font-weight: 500;
+      letter-spacing: 0.2rem;
+      margin-bottom: 10px;
+    }
+    #about .col-right p {
+      margin-bottom: 20px;
+    }
+    #about .col-right .cta {
+      color: black;
+      margin-bottom: 50px;
+      padding: 10px 20px;
+      font-size: 2rem;
+    }
+    #about .col-left .about-img {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      border: 10px solid black;
+    }
+    #about .col-left .about-img::after {
+      content: "";
+      position: absolute;
+      left: -33px;
+      top: 19px;
+      height: 98%;
+      width: 98%;
+      border: 7px solid crimson;
+      z-index: 2;
+    }
+    /* End About Section */
+
+    /* contact Section */
+    .section-title {
+      text-align: center;
+    }
+
+    #contact .contact {
+      flex-direction: column;
+      margin: 0 auto;
+    }
+    #contact .contact-items {
+      display: flex;
+    }
+    #contact .contact-item {
+      width: 80%;
+      text-align: center;
+      border-radius: 10px;
+      margin: 30px;
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      box-shadow: 0px 0px 18px 0 #360ee7df;
+      transition: 0.3s ease box-shadow;
+    }
+    #contact .contact-item:hover {
+      box-shadow: 0px 0px 5px 0 #f30ec1e3;
+    }
+    #contact .icon {
+      width: 70px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
+    #contact .contact-info h1 {
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+    #contact .contact-info h2 {
+      font-size: 20px;
+      font-weight: 500;
+    }
+    /*End contact Section */
+  </style>
+</div>

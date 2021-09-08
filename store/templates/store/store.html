@@ -1,0 +1,82 @@
+{% extends 'store/main.html' %} {% load static %} {% block content %}
+
+
+<section id="hero">
+  <img src="static\images\banners.jpeg" id="title" width="100%" height="400px">
+  <div class="hero title">
+    <div>
+      <h1>Picky Outlet<span></span></h1>
+      <h1>Quick and <span></span></h1>
+      <h1>hassle free shopping<span></span></h1>
+    </div>
+  </div>
+  <button class="btn" ><a href="#shop" class="scroll">Shop</a></button>
+</section>
+<div class="split">
+  <div class="pic"><img src="static\images\left.png" width="350px" height="400px"></div>
+  <span class="pic"><img src="static\images\best.png" width="350px" height="400px"></span>
+  <h1 class="pic"><img src="static\images\right.png" width="350px" height="400px"></h1>
+</div>
+
+<div id="poster">
+    <img id="posters" src="static\images\poster.png" width="100%" height="200px" />
+</div>
+<br id="shop">
+<hr >
+<div class="heading">Buy Now</div>
+<hr>
+<div class="row">
+  {% for product in products %}
+  <div class="col-lg-4" id="shop">
+    <img class="thumbnail" src="{{product.imageURL}}" />
+    <div class="box-element product">
+      <h6><strong>{{product.name}}</strong></h6>
+      <hr />
+
+      <button
+        data-product="{{product.id}}"
+        data-action="add"
+        class="btn btn-outline-secondary add-btn update-cart"
+      >
+        Add to Cart
+      </button>
+
+      <a class="btn btn-outline-success" href="#">View</a>
+      <h4 style="display: inline-block; float: right">
+        <strong>Rs.{{product.price}}</strong>
+      </h4>
+    </div>
+  </div>
+  {% endfor %}
+ <div class="deals">
+   <div class="offer"><img id="offer"  src="static\images\deals.png" height="350px" width="650px"></div>
+   <span class="decorator"><img src="static\images\decorator.png"></span>
+ </div> 
+</div>
+
+<hr>
+  <!-- Footer -->
+  <section id="footer">
+    <div class="footer">
+      <div class="brand"><h3>PICKY Outlet</h3></div>
+      <div class="social-icon">
+        <div class="social-item">
+          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" height="50px" width="50px"/></a>
+        </div>
+        <div class="social-item">
+          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" height="50px" width="50px" /></a>
+        </div>
+        <div class="social-item">
+          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/twitter.png" height="50px" width="50px"/></a>
+        </div>
+        <div class="social-item">
+          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png" height="50px" width="50px"/></a>
+        </div>
+      </div>
+      <p>Copyright  © 2021 PickyOutlet. All rights reserved</p>
+    </div>
+  </section>
+  <!-- End Footer -->
+
+
+{% endblock content %}

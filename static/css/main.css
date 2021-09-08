@@ -1,0 +1,377 @@
+body {
+  background-color: rgb(2, 2, 2);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: hsl(0, 0%, 30%);
+}
+
+.box-element {
+  box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+  background-color: rgb(185, 183, 183);
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 200px;
+  -webkit-box-shadow: -1px -3px 5px -2px rgba(214, 214, 214, 1);
+  -moz-box-shadow: -1px -3px 5px -2px rgba(214, 214, 214, 1);
+  box-shadow: -1px -3px 5px -2px rgba(214, 214, 214, 1);
+}
+@keyframes text_reveal_box {
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes text_reveal {
+  100% {
+    color: rgb(255, 255, 255);
+  }
+}
+@keyframes text_reveal_name {
+  100% {
+    color: rgb(255, 156, 8);
+    font-weight: 500;
+  }
+}
+#title{
+  opacity:0.4;
+}
+#hero {
+  z-index: 1;
+}
+#hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.7;
+  z-index: -1;
+}
+#hero .hero {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 50px;
+  justify-content: flex-start;
+}
+#hero h1 {
+  display: block;
+  width: fit-content;
+  font-size: 4rem;
+  position: relative;
+  color: transparent;
+  animation: text_reveal 0.5s ease forwards;
+  animation-delay: 1s;
+}
+#hero h1:nth-child(1) {
+  animation-delay: 1s;
+}
+#hero h1:nth-child(2) {
+  animation-delay: 2s;
+}
+#hero h1:nth-child(3) {
+  animation: text_reveal_name 0.5s ease forwards;
+  animation-delay: 3s;
+}
+#hero h1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: rgb(255, 156, 8);
+  animation: text_reveal_box 1s ease;
+  animation-delay: 0.5s;
+}
+#hero h1:nth-child(1) span {
+  animation-delay: 0.5s;
+}
+#hero h1:nth-child(2) span {
+  animation-delay: 1.5s;
+}
+#hero h1:nth-child(3) span {
+  animation-delay: 2.5s;
+}
+.title {
+  position: absolute;
+  top: 200px;
+  left: 250px;
+  opacity:1 !important;
+}
+#hero .btn {
+  position:absolute;
+  top: 60%;
+  left: 82%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color:rgb(255, 156, 8);
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 45px;
+}
+.scroll {
+  color: rgb(69, 196, 185);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.scroll:hover {
+  color: bisque;
+}
+
+#logo {
+  height: 40px;
+}
+#hello {
+  font-size: 16px;
+  color: bisque;
+}
+
+.split {
+  margin-top: 20px;
+  display: flex;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#banners {
+  animation: appear 4s 3 ease;
+}
+.pic {
+  margin-left: auto;
+  margin-right: auto;
+}
+.header-container .btn {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #ccc6b1;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.scroll {
+  color: rgb(78, 0, 0);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.scroll:hover {
+  color: bisque;
+  background-color: rgb(78, 0, 0);
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+#posters {
+  margin-bottom: 20px;
+  background-size: cover;
+  animation: bounce 2s 5 ease;
+}
+
+h1 {
+  color: bisque;
+}
+.heading {
+  font-size: 35px;
+  text-align: center;
+  color: white;
+}
+.product {
+  border-radius: 0 0 4px 4px;
+}
+
+#cart-icon {
+  width: 25px;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+#cart-total {
+  display: block;
+  text-align: center;
+  color: #fff;
+  background-color: red;
+  width: 20px;
+  height: 25px;
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+.col-lg-4,
+.col-lg-6,
+.col-lg-8,
+.col-lg-12 {
+  margin-top: 10px;
+}
+
+.btn {
+  border-radius: 0;
+}
+
+.row-image {
+  width: 100px;
+}
+
+.form-field {
+  width: 250px;
+  display: inline-block;
+  padding: 5px;
+}
+
+.cart-row {
+  display: flex;
+  align-items: flex-stretch;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ececec;
+}
+
+.quantity {
+  display: inline-block;
+  font-weight: 700;
+  padding-right: 10px;
+}
+
+.chg-quantity {
+  width: 12px;
+  cursor: pointer;
+  display: block;
+  margin-top: 5px;
+  transition: 0.1s;
+}
+
+.chg-quantity:hover {
+  opacity: 0.6;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.bg-dark {
+  background-color: #000000 !important;
+}
+.btn-warning {
+  color: #212529;
+  background-color: #ffbf00;
+  border-color: #473603;
+}
+.deals {
+  display: flex;
+  height:400px;
+}
+@keyframes dropb {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+#offer {
+  border: 5px solid #555;
+}
+.offer {
+  margin-top: 15px;
+  margin-left: 5px;
+
+  background-size: cover;
+  animation: dropb 2s infinite ease;
+}
+@keyframes slideb {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
+.decorator {
+  margin-top: 10px;
+  margin-left: 10px;
+  animation: slideb 2s infinite ease;
+}
+
+hr {
+  width: 100%;
+  border: 0.5px solid rgb(143, 0, 0);
+  margin: auto;
+}
+.brand h3{
+  font-size: 20px;
+  color: white;
+}
+#footer {
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  text-align: center;
+  margin-bottom: 5px;
+  height: 100px;
+}
+#footer .footer {
+	flex-direction: column;
+  margin-bottom: 0%;
+}
+
+#footer .social-icon {
+	display: flex;
+	margin-bottom: 10px;
+  width:300px;
+  margin: auto;
+ 
+}
+#footer .social-item {
+	height: 50px;
+	width: 50px;
+	margin:auto;
+}
+#footer .social-item img {
+	filter: grayscale(1);
+	transition: .3s ease filter;
+}
+#footer .social-item:hover img {
+	filter: grayscale(0);
+}
+#footer p {
+	color: white;
+	font-size: 15px;
+}
